@@ -59,9 +59,12 @@ SELECT `school_db_student`.`id`,
 # Print out each student's full name and gpa to the terminal
 def problem_one(request):
   
-  
+  gpa= Student.objects.filter(gpa__gt = 3.0)
 
- return complete(request)
+  for students in students:
+    print(f'First name:{students.first_name} GPA:{gpa}')
+
+  #return complete(request)
 
 
 # Supporting Query Method Documentation:
@@ -141,6 +144,7 @@ SELECT `school_db_instructor`.`id`,
 # (Do not hard code his name in the print)
 def problem_three(request):
 
+  
     return complete(request)
 
 
